@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Makes wbsite pretty-->
+  <style>
+    button {
+       background-color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+    body.dark-mode {
+      background-color: #222222;
+      color: #ffffff;
+    }
+    .toggle-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+    .toggle-btn.dark-mode {
+      background-color: #222222;
+      color: #ffffff;
+    }
+
+    <!--
+ .tab { margin-left: 40px; }
+-->
+ body {
+      background-color: white;
+      font-family: Arial, sans-serif;
+      color: #4C4C4C;
+    }
+    h1 {
+      color: #CD5C5C;
+      font-family: Georgia, serif;
+      font-size: 48px;
+      text-align: center;
+      margin-top: 40px;
+      animation: fadeIn 2s ease;
+    }
+    h3 {
+      color: #CD5C5C;
+      font-family: Georgia, serif;
+      font-size: 25px;
+      margin-top: 30px;
+      animation: fadeIn 2s ease;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-top: 10px;
+      animation: fadeIn 2s ease;
+    }
+    ol {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-top: 10px;
+      margin-left: 30px;
+      animation: fadeIn 2s ease;
+    }
+    a {
+      color: #CD5C5C;
+      text-decoration: none;
+      border-bottom: 2px solid #CD5C5C;
+      animation: fadeIn 2s ease;
+    }
+    a:hover {
+      color: #8c3a3a;
+      text-decoration: none;
+      border-bottom: 2px solid #8c3a3a;
+    }
+    .image-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      
+    }
+    .image-container img {
+      border-radius: 50%;
+      box-shadow: 2px 2px 5px #FBEFF2;
+
+  }
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+      animation: fadeIn 2s ease;
+    }
+    .button-container button {
+      font-family: Georgia, serif;
+      background-color: #CD5C5C;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .button-container button:hover {
+      font-family: Georgia, serif;
+      background-color: #FDEDEC;
+      color: #CD5C5C;
+      border: 2px solid #CD5C5C;
+    }
+    #myImage {
+      display: none;
+      max-width: 100%;
+    }
+        @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+    <!--SP image toggle-->
+  <script>
+    function toggleImage() {
+      var image = document.getElementById("myImage");
+      var button = document.getElementById("myButton");
+      if (image.style.display === "none") {
+        image.style.display = "block";
+        button.innerHTML = "Hide Image";
+      } else {
+        image.style.display = "none";
+        button.innerHTML = "Show Image";
+      }
+    }
+  </script>
+  <title>My Favorites</title>
+</head>
+<body>
+  <h1>My Favorites</h1>
+  <h3>About me</h3>
+  <p class="tab"> My name is Shanya Tissera.
+    <br>
+      I am 12 years old.
+  </p>
+  <h3>Here are my favorite things:</h3>
+  <ol>
+    <li>Drawing is one of my favorite hobbies. I particularly enjoy using a pen since it gives my drawings a scratchier appearance. I like digital art as well. Below is a finished drawing that I made.
+    </li>
+    <br>
+      <div class="gallery">
+  <img src="https://i.ibb.co/j4JRTPW/A215-F15-E-0181-44-FB-AD37-08-EC3332182-F.png" alt="Image 1">
+</div>
+    <br>
+    <li>Some of my favorite foods include...
+      <ul>
+        <li>Chicken</li>
+        <li>Pasta</li>
+        <li>Potatoes</li>
+        <li>And rice</li>
+      </ul>
+    </li>
+    <br>
+    <li>I also like watching TV. My favorite show is South Park. </li>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S8p22rtNMoM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<img id="myImage" src="https://www.hollywoodreporter.com/wp-content/uploads/2021/10/south-park-4.jpg" alt="Stan, Kyle, Kenny and Cartman">
+<br><button id="myButton" onclick="toggleImage()">Show Image</button><br>
+      <br>
+South Park was made in 1997 and follows the lives of Stan, Kyle, Kenny, and Cartman in the small town of South Park.
+    <br>
+    <br>
+    <li>My favorite animals are dogs. I have a dog named Biscuit. He is a golden doodle, which is a mix between a golden retriever and a poodle.</li>
+    <br>
+    <li>My favorite band is TV Girl. Below is one of their songs.
+      <br>
+      <br>
+        <!--Soundclound embed-->
+    <iframe width="25%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/153024485&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/tv-girl" title="TV Girl" target="_blank" style="color: #cccccc; text-decoration: none;">TV Girl</a> · <a href="https://soundcloud.com/tv-girl/09-lovers-rock" title="Lovers Rock" target="_blank" style="color: #cccccc; text-decoration: none;">Lovers Rock</a></div>
+</li>
+  </ol>
+
+   <button id="toggle-dark-mode" class="toggle-btn">Toggle/Untoggle Dark Mode</button>
+
+  <script>
+    // Get all the images in the gallery
+const images = document.querySelectorAll('.gallery img');
+
+// Add a click event listener to each image
+images.forEach(image => {
+  image.addEventListener('click', () => {
+    // Create a modal
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    modal.innerHTML = `<img src="${image.src}" alt="${image.alt}">`;
+
+    // Add the modal to the document
+    document.body.appendChild(modal);
+
+    // Add a click event listener to the modal
+    modal.addEventListener('click', () => {
+      // Remove the modal from the document
+      document.body.removeChild(modal);
+    });
+  });
+});
+
+
+
+    
+    
+        const toggleBtn = document.getElementById('toggle-dark-mode');
+    const body = document.querySelector('body');
+    toggleBtn.addEventListener('click', function() {
+      body.classList.toggle('dark-mode');
+      toggleBtn.classList.toggle('dark-mode');
+          });
+
+  </script>
+</body>
+</html>
